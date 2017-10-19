@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- 8
+install:
+  - npm i
+  - pip install awscli
+after_success:
+  - npm run build
+deploy:
+  provider: script
+  script: chmod +x ./deploy.sh && ./deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+notifications:
+  email: false
