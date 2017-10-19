@@ -1,13 +1,9 @@
-language: python
 node_js:
   - 8
 python:
   - 3.6
 install:
   - npm i
-  - pip install setuptools --upgrade
-  - pip install pip --upgrade
-  - pip install "urllib3[secure]" --upgrade
   - pip install awscli
 after_success:
   - npm run build
