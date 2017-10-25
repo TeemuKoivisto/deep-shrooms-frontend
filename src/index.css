@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.main__container {
+  margin: 30px;
+}
+
+.mushrooms__container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
