@@ -6,6 +6,7 @@ import MushroomImage from '../components/MushroomImage'
 import images from '../img'
 
 const API_URL = process.env.REACT_APP_API_URL
+// const API_URL = 'https://teekoivi.users.cs.helsinki.fi/deep-shrooms'
 
 const mushrooms = [
   {
