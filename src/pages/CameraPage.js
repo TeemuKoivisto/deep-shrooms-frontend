@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import Webcam from 'react-webcam';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Webcam from 'react-webcam'
 
-class App extends Component {
+export default class CameraPage extends Component {
 
   state = {
     imageSrc: '',
@@ -21,13 +19,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+      <div>
+        <h1>Webcam</h1>
+        <p>
+          This is an experimental page on which you can take a picture with your camera and send it to 
+          server for mushroom prediction.
+        </p>
+        <p>
+          NOTE: you should close this page on your mobile phone or laptop after you're done since the camera 
+          will stay otherwise running.
         </p>
         <p>Picture size: {this.state.imageSrc.length}</p>
         <Webcam
@@ -42,5 +42,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
