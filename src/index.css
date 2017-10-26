@@ -12,4 +12,15 @@ body {
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
+  margin: auto;
+}
+
+.mushroom__item__container {
+  padding: 5px;
+}
+
+.twin__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -8,20 +8,23 @@ export default class MushroomImage extends Component {
 
   render() {
     const { name_latin, name_fin, edibility, url_wiki, src, prediction } = this.props
+    const roundedPred = prediction ? Math.round(prediction * 100) : undefined
     return (
-      <div>
+      <div className="mushroom__item__container">
         <h3>
           <a href={url_wiki} target="_blank" rel="noopener noreferrer">
             { name_latin }</a>
           <span> ({ name_fin })</span>
         </h3>
-        <p>{ edibility }</p>
-        { prediction !== undefined ? 
-          <p>prediction: { prediction }</p>
-          :
-          null
-        }
-        <img onClick={this.onImageClick} src={src} alt={name_latin} width="480" height="480" />
+        <div className="twin__text">
+          <p>{ edibility }</p>
+          { prediction !== undefined ? 
+            <p>prediction: { roundedPred }%</p>
+            :
+            null
+          }
+        </div>
+        <img onClick={this.onImageClick} src={src} alt={name_latin} width="360" height="360" />
       </div>
     );
   }

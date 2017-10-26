@@ -131,6 +131,7 @@ class FrontPage extends Component {
 
   render() {
     const { prediction, error, mushrooms } = this.state
+    const roundedPred = Math.round(prediction * 100)
     return (
       <div className="main__container">
         <h1>DeepShrooms <a href="https://github.com/teemukoivisto/deep-shrooms-frontend">(Source code)</a></h1>
@@ -140,7 +141,7 @@ class FrontPage extends Component {
         <p>
           Server returns prediction as float between 0 and 1 where 0 means poisonous and 1 edible.
         </p>
-        <p>Prediction: { prediction }</p>
+        <p>Prediction: { roundedPred }%</p>
         { error ? 
           <p>Error: { error }</p>
           :
